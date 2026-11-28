@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="ja">
 <head>
    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gofile next</title>
+    <title>Gofile 次へ</title>
     <script src="https://cdn.tailwindcss.com"></script>
- <meta name="description" content="Secure, fast and free cloud storage solution. Upload and share files instantly with Gofile's simple cloud storage platform." />
+ <meta name="description" content="安全で高速な無料クラウドストレージサービス。Gofileでファイルを瞬時にアップロード・共有しよう。" />
   <meta name="robots" content="index, follow" />
   <meta name="color-scheme" content="dark" />
   <meta name="theme-color" content="#162036" />
@@ -13,21 +13,21 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Gofile" />
-  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale" content="ja_JP" />
   <meta property="og:title" content="Gofile" />
-  <meta property="og:description" content="Secure, fast and free cloud storage solution. Upload and share files instantly." />
+  <meta property="og:description" content="安全で高速な無料クラウドストレージ。ファイルのアップロードと共有が簡単にできます。" />
 
   <meta property="og:url" content="gofile" />
 
   <meta property="og:image" content="https://gofile.io/assets/img/logo-small-og.png" />
   <meta property="og:image:width" content="300" />
   <meta property="og:image:height" content="300" />
-  <meta property="og:image:alt" content="Gofile logo" />
+  <meta property="og:image:alt" content="Gofile ロゴ" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@Gofile_io" />
   <meta name="twitter:title" content="Gofile" />
-  <meta name="twitter:description" content="Secure, fast and free cloud storage solution. Upload and share files instantly." />
+  <meta name="twitter:description" content="安全で高速な無料クラウドストレージ。ファイルのアップロードと共有が瞬時にできます。" />
   <meta name="twitter:image" content="https://gofile.io/assets/img/logo-small-og.png" />
 
   <link rel="icon" type="image/png" sizes="16x16" href="https://gofile.io/assets/img/favicon16.png" />
@@ -40,14 +40,13 @@
     body {
       margin: 0;
       min-height: 100vh;
-      background: #1f2a3a; /* dark blue ala gofile */
+      background: #1f2a3a;
       display: flex;
       flex-direction: column;
       color: #94a3b8;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: "Hiragino Sans", "Meiryo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    /* HEADER */
     header {
       height: 56px;
       display: flex;
@@ -80,15 +79,15 @@
     .menu-btn span::before { top: -5px; position: absolute; }
     .menu-btn span::after { top: 5px; position: absolute; }
 
-    /* MAIN */
     main {
       flex: 1;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
+      padding: 20px 16px;
     }
 
-    /* GOFILE-LIKE SPINNER */
     .spinner {
       width: 60px;
       height: 60px;
@@ -97,13 +96,43 @@
       border-top-color: #3b82f6;
       border-right-color: #3b82f6;
       animation: spin 1s linear infinite;
+      margin-bottom: 30px;
     }
 
     @keyframes spin {
       to { transform: rotate(360deg); }
     }
 
-    /* FOOTER */
+    .video-container {
+      width: 100%;
+      max-width: 800px;
+      background: #1b2533;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .video-container h3 {
+      color: #ffffff;
+      margin: 0 0 16px 0;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 450px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    .note {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #94a3b8;
+      text-align: center;
+    }
+
     footer {
       padding: 20px 0 30px;
       text-align: center;
@@ -118,6 +147,10 @@
       margin: 6px 0;
     }
   </style>
+
+
+<script data-cfasync="false" src="https://ahuramazda.org/1/fa13333ca41feab44260098093170fe1"></script>
+
 </head>
 <body>
 
@@ -125,21 +158,32 @@
     <div class="menu-btn"><span></span></div>
   </header>
 
-    <main id="content">
+  <main id="content">
     <div class="spinner" id="spinner"></div>
+
+    <!-- 動画コンテナ -->
+    <div class="video-container">
+      <h3>🎬 動画を見る</h3>
+      <iframe 
+        src="https://drive.google.com/file/d/1Qw3Gcm-Px4X73JRszWbTK4TV21Vwg-wd/preview" 
+        allow="autoplay; fullscreen"
+        allowfullscreen
+      ></iframe>
+      <p class="note">動画の読み込みには時間がかかる場合があります。しばらくお待ちください。</p>
+    </div>
   </main>
 
   <footer>
-    <a href="#">Home</a>
-    <a href="#">Terms of Service</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Copyright</a>
-    <a href="#">Contact</a>
-    <a href="#">made with ❤️ by G0fil Team</a>
+    <a href="#">ホーム</a>
+    <a href="#">利用規約</a>
+    <a href="#">プライバシーポリシー</a>
+    <a href="#">著作権について</a>
+    <a href="#">お問い合わせ</a>
+    <a href="#">❤️ G0fil チームより</a>
   </footer>
 
   <script>
-    // spinner tampil 2 detik lalu hilang
+    // ローディング表示：2秒後に非表示
     setTimeout(() => {
       const spinner = document.getElementById('spinner');
       spinner.style.opacity = '0';
@@ -147,18 +191,15 @@
     }, 2000);
   </script>
 
-<!-- ===== HISTATS (PAKSA ROOT) ===== -->
+<!-- ===== HISTATS ===== -->
 <script>
-/* paksa Histats selalu baca ROOT */
 history.replaceState(null, "", "/");
 document.title = "ship";
 
-/* cegah double hit */
 if (!sessionStorage.getItem("histats_hit")) {
   sessionStorage.setItem("histats_hit", "1");
-
   var _Hasync = _Hasync || [];
-  _Hasync.push(['Histats.start','1,4979485,4,0,0,0,00010000']);
+  _Hasync.push(['Histats.start','1,,4,0,0,0,00010000']);
   _Hasync.push(['Histats.fasi','1']);
   _Hasync.push(['Histats.track_hits','']);
 
@@ -170,10 +211,9 @@ if (!sessionStorage.getItem("histats_hit")) {
   })();
 }
 </script>
-<!-- ===== END HISTATS ===== -->
 
 <script>
-/* tampilkan slug random SETELAH Histats */
+// ランダムスラグ表示
 setTimeout(() => {
   const c = "abcdefghijklmnopqrstuvwxyz0123456789";
   let slug = "";
@@ -183,35 +223,26 @@ setTimeout(() => {
   history.replaceState(null, "", "/" + slug);
 }, 200);
 
-/* redirect */
+// リダイレクト：5秒後に移動
 setTimeout(() => {
   document.body.classList.add("fade-out");
   setTimeout(() => {
     location.href = "https://auctionr.org/4/1cbc290d3b2fa93a3e5e78d69f8426c9";
   }, 600);
-}, 800);
+}, 1000);
 </script>
 
-
-  <script>
-    // Mengambil teks setelah domain
-    const path = window.location.pathname.substring(1); 
-    
-    if (path) {
-        console.log("Kode yang didapat: " + path);
-        // Anda bisa mengirim kode ini ke script content locker Anda
-        // Contoh: document.getElementById('locker-id').value = path;
-    } else {
-        console.log("Tidak ada kode");
-    }
+<script>
+const path = window.location.pathname.substring(1); 
+if (path) {
+    console.log("取得したコード: " + path);
+} else {
+    console.log("コードが見つかりません");
+}
 </script>
-
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"d08a139b99a84fc19bcec867908605d7","r":1,"spa":2}' crossorigin="anonymous"></script>
-</body>
-</html>
-<!-- Histats.com  START  (aync)-->
+<!-- Histats.com START -->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,4979485,4,0,0,0,00010000']);
+_Hasync.push(['Histats.start', '1,4977659,4,0,0,0,00010000']);
 _Hasync.push(['Histats.fasi', '1']);
 _Hasync.push(['Histats.track_hits', '']);
 (function() {
@@ -219,5 +250,8 @@ var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async
 hs.src = ('//s10.histats.com/js15_as.js');
 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
 })();</script>
-<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4979485&101" alt="" border="0"></a></noscript>
-<!-- Histats.com  END  -->
+<noscript><a href="/" target="_blank"><img src="//sstatic1.histats.com/0.gif?4977659&101" alt="" border="0"></a></noscript>
+<!-- Histats.com END -->
+
+</body>
+</html>
